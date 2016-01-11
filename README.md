@@ -1,12 +1,18 @@
 # I2C-1602-LCD
 #Python code for a 1602 LCD using a PCF8574T
 #Reference Source from https://youtu.be/i5A5AsDRRwQ
+Hardware:
+LCD 16x2
+PCF8574T OE Board Module Port I2C
+Raspberry Pi 2
 
-To put something to the screen on your LCD type, ./print.sh something somethingtoo
+To put something to the screen on your LCD type,
+Run:
+./print.sh something somethingtoo
 
 To get your IP to your LCD run, ItHurtsWhenIP.py
-This examples will print on the LCD screen.
 
+This examples will print on the LCD screen.
 example1:
 ./print.py line1 line2 
 LCD output:
