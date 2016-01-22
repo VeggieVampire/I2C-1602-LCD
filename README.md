@@ -28,6 +28,6 @@ your local time on your system.
 
 Weather Example:<br>
 Example is using Tulsa, OK
-change 'tulsa%2C%20ok' to your city or town and your state to get the weather. to run it type ./print.py $(./weather.sh)
+change 'tulsa%2C%20ok' to your city or town and your state to get the weather. to run it type <br>
 ./print.py $(./weather.sh)
 
