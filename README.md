@@ -6,6 +6,11 @@ LCD 16x2<br>
 PCF8574T OE Board Module Port I2C<br>
 Raspberry Pi 2<br>
 <br>
+Install
+<br>
+sudo apt-get install python-smbus<br>
+git clone https://github.com/VeggieVampire/I2C-1602-LCD/<br>
+
 To put something to the screen on your LCD<br>
 Run:<br>
 ./print.sh something somethingtoo<br>
