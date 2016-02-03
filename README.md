@@ -12,8 +12,8 @@ sudo apt-get install i2c-tools<br>
 sudo apt-get install python-smbus<br>
 sudo echo "i2c-bcm2708">>/etc/modules<br>
 sudo echo "i2c-dev">>/etc/modules<br>
-sudo init 6
-sudo i2cdetect -y 1
+sudo init 6<br>
+sudo i2cdetect -y 1<br>
 git clone https://github.com/VeggieVampire/I2C-1602-LCD/<br>
 
 
