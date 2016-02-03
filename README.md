@@ -8,11 +8,15 @@ Raspberry Pi 2<br>
 <br>
 Install
 <br>
+sudo apt-get install i2c-tools<br>
 sudo apt-get install python-smbus<br>
-git clone https://github.com/VeggieVampire/I2C-1602-LCD/<br>
-sudo vi /etc/modules<br>
 sudo echo "i2c-bcm2708">>/etc/modules<br>
 sudo echo "i2c-dev">>/etc/modules<br>
+sudo init 6
+sudo i2cdetect -y 1
+git clone https://github.com/VeggieVampire/I2C-1602-LCD/<br>
+
+
 
 To put something to the screen on your LCD<br>
 Run:<br>
