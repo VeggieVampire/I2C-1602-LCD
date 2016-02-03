@@ -10,6 +10,9 @@ Install
 <br>
 sudo apt-get install python-smbus<br>
 git clone https://github.com/VeggieVampire/I2C-1602-LCD/<br>
+sudo vi /etc/modules<br>
+sudo echo "i2c-bcm2708">>/etc/modules<br>
+sudo echo "i2c-dev">>/etc/modules<br>
 
 To put something to the screen on your LCD<br>
 Run:<br>
