@@ -3,5 +3,22 @@ station=KTUL
 weather=$(curl -sS "http://w1.weather.gov/xml/current_obs/display.php?stid=$station"|sed -n  '31p'|awk '{print $1$2$3$4$5$6}'| awk -F'[<|>]' '{print $3}')
 temp=$(curl -sS "http://w1.weather.gov/xml/current_obs/display.php?stid=$station"|sed -n  '32p'|awk '{print $1$2$3$4$5$6}'|awk -F'[<|>]' '{print $3}')
 TTime=$(echo $(date)|awk '{print $4}'|rev | cut -c 4- | rev)
-echo $weather','$TTime
-printf "$weather"|printf "$temp \n"
+HHour=$(echo $(date)|awk '{print $4}'|rev | cut -c 7- | rev)
+MMin=$(echo $(date)|awk '{print $4}'|rev | cut -c 4- | rev| cut -c 4-)
+
+PostMeridiem="A"
+if [ "$HHour" -gt 12 ]
+then
+    NHour=$(expr $HHour - 12)
+	HHour=$NHour
+	PostMeridiem="P"
+fi
+
+MTime=$(echo $(date)|awk '{print $4}'|rev | cut -c 4- | rev)
+#If you want military time use MTime below.
+#printf "$weather \n"
+#printf "$temp$MTime \n"
+
+#standard time with ante meridiem which is Latin for Before Midday and PM  for Post Meridiem
+printf "$weather \n"
+printf "$temp$HHour:$MMin$PostMeridiem \n"
